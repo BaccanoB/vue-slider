@@ -23,8 +23,11 @@ var app = new Vue (
             prevImage: function(){
                 this.indexImage --;
                 if(this.indexImage == -1){
-                    this.indexImage = this.images.length;
+                    this.indexImage = this.images.length -1;
                 }
             }
-        }
+        },
+        // created: function(){
+        //     setInterval(, 3000);
+        // }
 });
