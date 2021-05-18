@@ -14,7 +14,7 @@ var app = new Vue (
             indexImage: 0,
         },
         methods: {
-            nextImage: function(){
+            nextImage: function (){
                 this.indexImage ++;
                 if(this.indexImage == this.images.length){
                     this.indexImage = 0;
@@ -27,7 +27,7 @@ var app = new Vue (
                 }
             }
         },
-        // created: function(){
-        //     setInterval(, 3000);
-        // }
+        created: function(){
+            setInterval(this.nextImage, 3000);
+        }
 });
