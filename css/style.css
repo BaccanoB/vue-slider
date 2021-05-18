@@ -56,9 +56,13 @@ img {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0,0,0,0.4);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .fa-circle {
+    margin: 0 3px 0 3px;
     color: white;
+}
+.fa-circle:hover{
+    cursor: pointer;
 }
