@@ -16,10 +16,15 @@
                     <i class="fas fa-chevron-left" @click="prevImage"></i>
                 </div>
                 <div id="img_bar">
-                    <img :src="images[index]" alt="città">
+                    <img :src="images[indexImage]" alt="città">
                 </div>
                 <div class="chevron_bar">
                     <i class="fas fa-chevron-right" @click="nextImage"></i>
+                </div>
+                <div id="circle_nav">
+                    <i v-for="(image,index) in images" 
+                    :class="(index == indexImage) ? 'fas' : 'far'"
+                    class="fa-circle"></i>
                 </div>
             </div>
         </div>

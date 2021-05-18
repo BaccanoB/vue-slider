@@ -11,13 +11,19 @@ var app = new Vue (
                 "https://www.viaggioinrussia.it/public/1140w/1573300755-guida-mosca.jpg",
                 "http://www.loveamsterdam.it/wp-content/uploads/2019/09/casas-barco-amsterdam.jpg",
             ],
-            index: 0,
+            indexImage: 0,
         },
         methods: {
             nextImage: function(){
-                this.index ++;
-                if(this.index == this.images.length){
-                    this.index = 0;
+                this.indexImage ++;
+                if(this.indexImage == this.images.length){
+                    this.indexImage = 0;
+                }
+            },
+            prevImage: function(){
+                this.indexImage --;
+                if(this.indexImage == -1){
+                    this.indexImage = this.images.length;
                 }
             }
         }
